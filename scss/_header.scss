@@ -1,0 +1,195 @@
+@use "vars" as *;
+
+#header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: white;
+	z-index: 999;
+	@include flex(0,center,wrap);
+	padding: 0 0 0 30px;
+	.header-logo{
+		display: block;
+		width: 195px;
+	}
+	.header-nav{
+		width: calc(100% - 195px);
+		@include flex(end,center,wrap);
+
+		@include mq(tb){
+			display: none;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 100vh;
+			padding: 60px 20px 0;
+			overflow-y: scroll;
+			&.active{
+				display: block;
+			}
+		}
+		&__menu{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-end;
+			width: calc(100% - 300px);
+			padding: 0 50px 0 0;
+			@include mq(tb){
+				display: block;
+			}
+			&-item{
+				padding: 0 15px;
+				a{
+					color: #3E3A39;
+					span{
+						display: block;
+						text-align: center;
+					}
+					.c-ft--en{
+						@include font-size(19);
+					}
+					.c-ft--base{
+						@include font-size(13);
+					}
+					&:hover{
+						opacity: 1;
+						color: $pink;
+					}
+				}
+			}
+		}
+		&__sns{
+			width: 300px;
+			@include flex(0,0,wrap);
+			&-item{
+				width: 50%;
+				a{
+					@include flex(center,center,wrap);
+					color: white;
+					line-height: 1;
+					height: 100px;
+					padding: 0 5px 0 0;
+					span{
+						display: block;
+
+					}
+					.box{
+						position: relative;
+						padding: 0 0 0 28px;
+						&:before{
+							content: "";
+							position: absolute;
+							@include v-align;
+							left: 0;
+						}
+					}
+					.c-ft--en{
+						@include font-size(19);
+
+					}
+					.c-ft--base{
+						@include font-size(13);
+
+					}
+				}
+			}
+			&--line{
+				background: #74C77C;
+				.box{
+					&:before{
+						width: 20px;
+						height: 20px;
+						background: url("../img/common/line.png")no-repeat;
+						background-size: 100%;
+					}
+				}
+			}
+			&--contact{
+				background: rgb(87,146,196);
+				background: linear-gradient(180deg, rgba(87,146,196,1) 0%, rgba(105,177,236,1) 100%);
+				.box{
+					&:before{
+						width: 19px;
+						height: 15px;
+						background: url("../img/common/mail.png")no-repeat;
+						background-size: 100%;
+					}
+				}
+			}
+		}
+	}
+	.js-mobile {
+		width: 26px;
+		height: 30px;
+		position: absolute;
+		right: 20px;
+		@include v-align;
+		cursor: pointer;
+		z-index: 12;
+		display: none;
+		@include mq(tb){
+			display: block;
+		}
+		span{
+			position: absolute;
+			@include v-align;
+			display: block;
+			width: 100%;
+			height: 2px;
+			background: #333;
+			border-radius: 3px;
+			&:before,&:after{
+				position: absolute;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: #333;
+				content: '';
+				-webkit-transition: -webkit-transform 0.3s;
+				transition: transform 0.3s;
+				border-radius: 3px;
+			}
+			&:before{
+				-webkit-transform: translateY(-250%);
+				transform: translateY(-250%);
+				top: -6px;
+			}
+			&:after{
+				-webkit-transform: translateY(250%);
+				transform: translateY(250%);
+				bottom: -6px;
+			}
+		}
+		&--close {
+			span{
+				background-color: transparent;
+				&:before,&:after{
+					width: 100%;
+					background: #333;
+				}
+				&:before {
+					-webkit-transform: translateY(0) rotate(45deg);
+					transform: translateY(0) rotate(45deg);
+					top: 2px;
+				}
+				&:after {
+					-webkit-transform: translateY(0) rotate(-45deg);
+					transform: translateY(0) rotate(-45deg);
+					bottom: -2px;
+				}
+			}
+		}
+	}
+}
+
+
+.js-locked {
+	overflow: hidden;
+	-ms-touch-action: none;
+	touch-action: none;
+	body {
+		-webkit-overflow-scrolling: auto;
+	}
+}

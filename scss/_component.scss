@@ -1,0 +1,144 @@
+@use "vars" as *;
+
+
+.c-fc{ //font-color
+	&--white{
+		color: white !important;
+	}
+	&--black{
+		color: black !important;
+	}
+}
+
+
+
+.c-ft{//font-family
+	&--en{
+		font-family: $font-en;
+	}
+	&--jp{
+		font-family: $font-jp;
+	}
+	&--base{
+		font-family: $font-base;
+	}
+	&--adventures{
+		font-family: $font-adventures
+	}
+}
+
+
+
+
+
+
+.c-al{
+	&--c{
+		text-align: center !important;
+	}
+	
+	&--r{
+		text-align: right !important
+	}
+	
+	&--l{
+		text-align: left !important;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ====================================================
+Component
+==================================================== */
+// Common Text style
+.c-txt{
+	&__basic{
+		@include fts(17,27);
+	}
+	&__heading{
+		text-align: center;
+		margin-bottom: 62px;
+	}
+}
+
+
+
+
+//ttl
+.c-ttl{
+	&__01{
+		line-height: 1;
+		margin-bottom: 24px;
+		text-align: center;
+		.c-ft--adventures{
+			@include font-size(80);
+		}
+		.c-ft--base{
+			@include font-size(13);
+			display: block;
+			padding-bottom: 19px;
+			margin: 0 0 0 7px;
+		}
+	}
+
+}
+
+//btn
+.c-btn{
+	&__viewmore{
+		display: inline-block;
+		position: relative;
+		@include font-size(17);
+		color: #3E3A39;
+		line-height: 1.2;
+		padding: 0 0 0 37px;
+		letter-spacing: 1px;
+		&:before{
+			content: "";
+			width: 30px;
+			height: 30px;
+			background: url("../img/common/arrow-right.png")no-repeat;
+			background-size: 100%;
+			position: absolute;
+			@include v-align;
+			left: 0;
+		}
+		&--white{
+			color: white;
+			&:before{
+				background: url(../img/common/arrow-right-02.png) no-repeat;
+				background-size: 100%;
+			}
+		}
+	}
+}
+
+
+//fade up
+.js-scrollin {
+	opacity: 0;
+	-webkit-transform: translate(0, 70px);
+	-ms-transform: translate(0, 70px);
+	transform: translate(0, 70px);
+	&.active{
+		opacity: 1;
+		-webkit-transform: translate(0, 0);
+		-ms-transform: translate(0, 0);
+		transform: translate(0, 0);
+		-webkit-transition: 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+		-o-transition: 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+		transition: 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	}
+}
+
+
+

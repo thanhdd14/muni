@@ -1,0 +1,64 @@
+@use "vars" as *;
+
+#footer{
+
+}
+.links-items{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	z-index: 1;
+	@include flex(0,0,wrap);
+	li{
+		a{
+			display: block;
+			@include font-size(23);
+			line-height: 1.2;
+			background: #E6EAEF;
+			color: #3E3A39;
+			padding: 10px 50px 10px 20px;
+			position: relative;
+			height: 100%;
+			&:after{
+				content: "";
+				border: solid #3e3a39;
+				border-width: 0 1px 1px 0;
+				display: inline-block;
+				padding: 5px;
+				position: absolute;
+				right: 15px;
+				transform: rotate(-45deg);
+				top: 30px;
+			}
+			small{
+				display: block;
+				@include font-size(17);
+				span{
+					@include font-size(14);
+					background: #346187;
+					display: inline-block;
+					padding: 5px 4px 1px;
+					margin: 0 0 2px 34px;
+				}
+			}
+			&:hover{
+				opacity: 1;
+				color: $pink;
+				background: #F6F6F6;
+			}
+		}
+		&:nth-child(1){
+			a{
+				color: white !important;
+				background: #5792C4;
+				&:after{
+					border: solid white;
+					border-width: 0 1px 1px 0;
+				}
+				&:hover{
+					background: $pink;
+				}
+			}
+		}
+	}
+}

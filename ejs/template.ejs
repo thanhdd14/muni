@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title><%= pageData.title %></title>
+	<meta name="description" content="<%= pageData.description %>">
+	<meta name="keywords" content="<%= pageData.keyword %>">
+	<meta name="format-detection" content="telephone=no">
+
+	<link type="text/css" rel="stylesheet" href="<%= RELATIVE_PATH %>js/slick/slick-theme.css">
+	<link type="text/css" rel="stylesheet" href="<%= RELATIVE_PATH %>js/slick/slick.css">
+	<link type="text/css" rel="stylesheet" href="<%= RELATIVE_PATH %>css/styles.css">
+
+	<script>
+		(function(d) {
+			var config = {
+					kitId: 'fzj8wtg',
+					scriptTimeout: 3000,
+					async: true
+				},
+				h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+		})(document);
+	</script>
+
+</head>
+<body>
+
+	<%- include('common/_header'); %>
+	<%- include(pageData.template, {datalabel:'data'}) %>
+	<%- include('common/_footer'); %>
+
+	<script src="<%= RELATIVE_PATH %>js/vendors/jquery-3.6.0.min.js"></script>
+	<script src="<%= RELATIVE_PATH %>js/slick/slick.min.js"></script>
+	<script src="<%= RELATIVE_PATH %>js/vendors/jquery.matchHeight-min.js"></script>
+	<script src="<%= RELATIVE_PATH %>js/vendors/setting.js"></script>
+</body>
+</html>
