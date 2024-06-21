@@ -1,12 +1,14 @@
 <main class="page-<%= pageData.template %>">
 	<section class="sec-mv">
 		<div class="mv-img">
-			<img src="<%= RELATIVE_PATH %>img/index/mv.jpg" alt="img">
+			<img src="<%= RELATIVE_PATH %>img/index/mv.jpg" alt="img" class="pc">
+			<img src="<%= RELATIVE_PATH %>img/index/mv-sp.jpg" alt="img" class="sp">
 		</div>
 		<h1 class="mv-heading">
-			<img src="<%= RELATIVE_PATH %>img/index/mv-heading.png" alt="img">
+			<img src="<%= RELATIVE_PATH %>img/index/mv-heading.png" alt="美姿勢で魅せる" class="pc">
+			<img src="<%= RELATIVE_PATH %>img/index/mv-heading-sp.png" alt="美姿勢で魅せる" class="sp">
 		</h1>
-		<ul class="mv-items">
+		<ul class="mv-items pc">
 			<li>
 				<img src="<%= RELATIVE_PATH %>img/index/mv-item-01.png" alt="下北沢駅から徒歩12分">
 			</li>
@@ -20,6 +22,9 @@
 				<img src="<%= RELATIVE_PATH %>img/index/mv-item-04.png" alt="体験レッスン無料">
 			</li>
 		</ul>
+		<div class="mv-items sp">
+			<img src="<%= RELATIVE_PATH %>img/index/mv-item-sp.png" alt="下北沢駅から徒歩12分 最大2名の少人数制レッスン 24時間予約受付 体験レッスン無料">
+		</div>
 	</section>
 	<section class="sec-banner">
 		<div class="inner">
@@ -78,23 +83,32 @@
 	</section>
 	<section class="sec-about">
 		<div class="about-block">
-			<div class="about-block__item">
+			<div class="about-block__item pc">
 				<img src="<%= RELATIVE_PATH %>img/index/about-item.png" alt="日々の喧騒や忙しさから解放され、心も身体もニュートラルに">
 			</div>
 			<div class="about-block__content">
 				<h2 class="about-block__content-ttl c-ft--jp">
-					日々の喧騒や忙しさから解放され、<br>
-					心も身体もニュートラルに
+					日々の喧騒や忙しさから<br class="sp">解放され、<br class="pc">心も身体も<br class="sp">ニュートラルに
 					<img src="<%= RELATIVE_PATH %>img/index/about-ttl.png" alt="無になる時間を">
-					大切にするピラティススタジオです
+					大切にする<br class="sp">ピラティススタジオです
 				</h2>
+				<div class="about-block__item sp">
+					<img src="<%= RELATIVE_PATH %>img/index/about-item-sp.png" alt="日々の喧騒や忙しさから解放され、心も身体もニュートラルに">
+				</div>
 				<p>
-					Pilates Studio Muniはあなたの「無になる時間」を大切にし、<br>
-					心身のバランスを整えることを目指したピラティススタジオです。<br>
-					西海岸を思わせるスタジオは、開放的でありながらも落ち着く空間。<br>
-					身体のすみずみまで意識を集中できるセミプライベートレッスンにこだわり、<br>
+					Pilates Studio Muniはあなたの「無になる時間」を大切にし、<br class="pc">心身のバランスを整えることを目指したピラティススタジオです。
+				</p>
+				<p>
+					西海岸を思わせるスタジオは、開放的でありながらも落ち着く空間。
+				</p>
+				<p>
+					身体のすみずみまで意識を集中できるセミプライベートレッスンにこだわり、<br class="pc">
 					ピラティス専用マシンの数も最小限に限定しています。<br>
-					日常を忘れ、心も身体もしなやかに。<br>
+				</p>
+				<p>
+					日常を忘れ、心も身体もしなやかに。
+				</p>
+				<p>
 					Pilates Studio Muniで唯一無二のピラティス時間を過ごしてみませんか？
 				</p>
 			</div>
@@ -109,7 +123,7 @@
 			<div class="c-txt__heading c-txt__basic">
 				<p>
 					日常を忘れ、無になる時間を創出<br>
-					個々のニーズに合わせたピラティスレッスンを行います
+					個々のニーズに合わせた<br class="sp">ピラティスレッスンを行います
 				</p>
 			</div>
 			<ul class="concept-list">
@@ -205,8 +219,7 @@
 			</div>
 			<div class="c-txt__heading c-txt__basic">
 				<p>
-					まずはゆっくり通いたい方から、集中して通いたい方まで<br>
-					個々のニーズに合わせた料金プランとオプションサービスをご用意しております。
+					まずはゆっくり通いたい方から、集中して通いたい方まで<br class="pc">個々のニーズに合わせた料金プランとオプションサービスをご用意しております。
 				</p>
 			</div>
 			<ul class="price-list">
@@ -224,5 +237,126 @@
 				<a href="/price" class="c-btn__viewmore c-btn__viewmore--white">もっと見る</a>
 			</div>
 		</div>
+	</section>
+	<section class="sec-trial">
+		<div class="inner">
+			<div class="c-ttl__01">
+				<span class="c-ft--adventures">Trial</span>
+				<h2 class="c-ft--base">初めての方へ</h2>
+			</div>
+			<div class="c-txt__heading c-txt__basic">
+				<p>
+					Muniを初めてご利用される方へ<br>
+					トライアルレッスンの流れを<br class="sp">ご紹介しております。
+				</p>
+			</div>
+			<div class="trial-block c-txt__basic">
+				<h3 class="trial-block__ttl">
+					<span>無料体験レッスン</span>実施中！
+				</h3>
+				<p>
+					事前予約システムを通じて、24時間気軽に申し込みが可能です<br><br class="sp">
+					レッスン後は、インストラクターが一人ひとりの状態や目標に応じた<br>
+					フィードバックを提供します
+				</p>
+			</div>
+			<ul class="trial-other">
+				<li>
+					<a href="https://muni-pilates.hacomono.jp/reserve/schedule/1/1/" target="_blank">
+						無料体験レッスン<br>
+						のお申し込みはこちら
+					</a>
+				</li>
+				<li>
+					<a href="/trial">
+						TRIALの<br class="pc-sm">詳細はこちら
+					</a>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<section class="sec-column">
+		<div class="inner">
+			<div class="c-ttl__01 mbpc-70">
+				<span class="c-ft--adventures">Column</span>
+				<h2 class="c-ft--base">コラム</h2>
+			</div>
+			<ul class="column-list">
+				<li class="column-list__item">
+					<div class="column-list__img">
+						<img src="<%= RELATIVE_PATH %>img/index/column-img-01.jpg" alt="Column">
+					</div>
+					<div class="column-list__ct c-txt__basic">
+						<span class="column-list__ct-time">2024 / 07 / 24</span>
+						<p>
+							記事の抜粋がはいります。記事の抜粋がはいります。記事の抜粋がはいります。記事の抜粋がはいります。記事の抜粋がはいります。
+						</p>
+					</div>
+				</li>
+				<li class="column-list__item">
+					<div class="column-list__img">
+						<img src="<%= RELATIVE_PATH %>img/index/column-img-02.jpg" alt="Column">
+					</div>
+					<div class="column-list__ct c-txt__basic">
+						<span class="column-list__ct-time">2024 / 07 / 24</span>
+						<p>
+							記事の抜粋がはいります。記事の抜粋がはいります。記事の抜粋がはいります。記事の抜粋がはいります。記事の抜粋がはいります。
+						</p>
+					</div>
+				</li>
+				<li class="column-list__item">
+					<div class="column-list__img">
+						<img src="<%= RELATIVE_PATH %>img/index/column-img-03.jpg" alt="Column">
+					</div>
+					<div class="column-list__ct c-txt__basic">
+						<span class="column-list__ct-time">2024 / 07 / 24</span>
+						<p>
+							記事の抜粋がはいります。記事の抜粋がはいります。記事の抜粋がはいります。記事の抜粋がはいります。記事の抜粋がはいります。
+						</p>
+					</div>
+				</li>
+			</ul>
+			<div class="c-al--r">
+				<a href="/column" class="c-btn__viewmore">もっと見る</a>
+			</div>
+		</div>
+	</section>
+	<section class="sec-contact">
+		<div class="inner">
+			<div class="c-ttl__01">
+				<span class="c-ft--adventures">Contact</span>
+				<h2 class="c-ft--base">お問い合わせ</h2>
+			</div>
+			<div class="c-txt__heading c-txt__basic">
+				<p>
+					お問い合わせは以下のフォームまたはお電話より承ります。
+				</p>
+			</div>
+			<div class="contact-block">
+				<a href="tel:0357909753" class="contact-block__item contact-block__tel">
+					<img src="<%= RELATIVE_PATH %>img/common/contact-tel.png" alt="03-5790-9753">
+				</a>
+				<a href="/contact/" class="contact-block__item contact-block__mail">
+					<span>
+						<span class="c-ft--en">Contact</span>
+						<small>
+							お問い合わせ
+						</small>
+					</span>
+				</a>
+			</div>
+			<div class="contact-note">
+				<p>
+					お客様よりよくお寄せいただく<br class="sp">ご質問と回答とまとめております。<br>
+					お問い合わせの前にご覧ください。
+				</p>
+				<a href="" class="contact-note__btn">
+					<span class="c-ft--en">Q<small>&</small>A</span>はこちら
+				</a>
+			</div>
+		</div>
+	</section>
+	<section class="sec-maps">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.524423815397!2d139.66753162535306!3d35.664087086490476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f36b3ad2db91%3A0x3f3ad847c2218fd4!2z44CSMTU1LTAwMzEg5p2x5Lqs6YO95LiW55Sw6LC35Yy65YyX5rKi77yS5LiB55uu77yT77yX4oiS77yR77yYIO-8re-8oe-8ru-8oeS4i-WMl-ayoiA0Zg!5e0!3m2!1sja!2sjp!4v1717469400705!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 	</section>
 </main>

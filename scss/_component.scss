@@ -67,6 +67,9 @@ Component
 	&__heading{
 		text-align: center;
 		margin-bottom: 62px;
+		@include mq(){
+			margin-bottom: 37px;
+		}
 	}
 }
 
@@ -77,10 +80,17 @@ Component
 .c-ttl{
 	&__01{
 		line-height: 1;
-		margin-bottom: 24px;
 		text-align: center;
+		margin-bottom: 24px;
+		@include mq(){
+			margin-bottom: 20px;
+		}
 		.c-ft--adventures{
 			@include font-size(80);
+			@include mq(){
+				margin-bottom: 11px;
+				display: block;
+			}
 		}
 		.c-ft--base{
 			@include font-size(13);

@@ -9,9 +9,15 @@
 	z-index: 999;
 	@include flex(0,center,wrap);
 	padding: 0 0 0 30px;
+	@include mq(tb){
+		padding: 15px;
+	}
 	.header-logo{
 		display: block;
 		width: 195px;
+		@include mq(){
+			width: 100px;
+		}
 	}
 	.header-nav{
 		width: calc(100% - 195px);
@@ -20,12 +26,15 @@
 		@include mq(tb){
 			display: none;
 			position: absolute;
-			top: 0;
+			top: 59px;
 			left: 0;
-			right: 0;
-			height: 100vh;
-			padding: 60px 20px 0;
+			width: 100%;
+			height: calc(100vh - 59px);
+			padding: 0 20px 120px;
 			overflow-y: scroll;
+			background: url("../img/common/bg-nav.png")no-repeat;
+			background-size: cover;
+			background-position: center center;
 			&.active{
 				display: block;
 			}
@@ -38,17 +47,32 @@
 			padding: 0 50px 0 0;
 			@include mq(tb){
 				display: block;
+				width: 100%;
+				padding: 0;
+				margin-bottom: 15px;
 			}
 			&-item{
 				padding: 0 15px;
+				@include mq(tb){
+					padding: 0;
+				}
 				a{
 					color: #3E3A39;
+					@include mq(tb){
+						@include flex(0,center,wrap);
+						color: white;
+						border-bottom: 1px solid white;
+						padding: 15px 0;
+					}
 					span{
 						display: block;
 						text-align: center;
 					}
 					.c-ft--en{
 						@include font-size(19);
+						@include mq(tb){
+							margin: 0 7px 0 0;
+						}
 					}
 					.c-ft--base{
 						@include font-size(13);
@@ -60,9 +84,55 @@
 				}
 			}
 		}
+		&__other{
+			display: none;
+			@include mq(tb){
+				display: block;
+				li{
+					a{
+						display: block;
+						padding: 7px 15px;
+						color: white;
+						@include font-size(17);
+						position: relative;
+						&:before{
+							content: "";
+							border: solid white;
+							border-width: 0 1px 1px 0;
+							display: inline-block;
+							padding: 2px;
+							transform: rotate(-45deg);
+							position: absolute;
+							top: 17px;
+							left: 0;
+						}
+						&.header-instagram{
+							padding-left: 0;
+							display: flex;
+							align-items: center;
+							&:before{
+								display: none;
+							}
+							img{
+								display: block;
+								margin: 2px 6px 0 0;
+							}
+						}
+;					}
+				}
+			}
+		}
 		&__sns{
 			width: 300px;
 			@include flex(0,0,wrap);
+			@include mq(tb){
+				width: auto;
+				margin: 0 -20px;
+				position: fixed;
+				bottom: 0;
+				left: 0;
+				right: 0;
+			}
 			&-item{
 				width: 50%;
 				a{
@@ -71,6 +141,9 @@
 					line-height: 1;
 					height: 100px;
 					padding: 0 5px 0 0;
+					@include mq(){
+						height: 60px;
+					}
 					span{
 						display: block;
 
@@ -120,32 +193,51 @@
 			}
 		}
 	}
-	.js-mobile {
-		width: 26px;
-		height: 30px;
+	.header-sns{
+		display: none;
+		@include mq(tb){
+			@include flex(center,center,wrap);
+		}
+
 		position: absolute;
-		right: 20px;
-		@include v-align;
+		top: 0;
+		right: 60px;
+		bottom: 0;
+		li{
+			border-right: 1px solid $blue;
+			padding: 0 20px;
+			&:last-child{
+				border-right: none;
+			}
+		}
+	}
+	.js-mobile {
+		width: 60px;
+		position: absolute;
+		right: 0;
+		top: 0;
+		bottom: 0;
 		cursor: pointer;
 		z-index: 12;
 		display: none;
+		background: rgba(#E6EAEF,0.5);
 		@include mq(tb){
-			display: block;
+			@include flex(center,center);
 		}
 		span{
 			position: absolute;
 			@include v-align;
 			display: block;
-			width: 100%;
+			width: 18px;
 			height: 2px;
-			background: #333;
+			background: $blue;
 			border-radius: 3px;
 			&:before,&:after{
 				position: absolute;
 				left: 0;
 				width: 100%;
 				height: 100%;
-				background: #333;
+				background: $blue;
 				content: '';
 				-webkit-transition: -webkit-transform 0.3s;
 				transition: transform 0.3s;
@@ -154,12 +246,12 @@
 			&:before{
 				-webkit-transform: translateY(-250%);
 				transform: translateY(-250%);
-				top: -6px;
+				top: -1px;
 			}
 			&:after{
 				-webkit-transform: translateY(250%);
 				transform: translateY(250%);
-				bottom: -6px;
+				bottom: -1px;
 			}
 		}
 		&--close {
@@ -167,7 +259,7 @@
 				background-color: transparent;
 				&:before,&:after{
 					width: 100%;
-					background: #333;
+					background: $blue;
 				}
 				&:before {
 					-webkit-transform: translateY(0) rotate(45deg);
