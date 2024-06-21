@@ -1,0 +1,92 @@
+@use "vars" as *;
+
+.faq-block{
+	background: white;
+	margin: -65px 0 0;
+	padding: 40px;
+	@include mq(){
+		margin: -135px 0 0;
+		padding: 20px;
+	}
+	&__ttl{
+		display: block;
+		@include font-size(25);
+		font-weight: bold;
+		background: #E6EAEF;
+		border-radius: 4px;
+		padding: 8px 15px;
+		margin-bottom: 35px;
+		@include mq(){
+			@include font-size(19);
+		}
+	}
+	&__item{
+		margin-bottom: 90px;
+		@include mq(){
+			margin-bottom: 60px;
+		}
+		&:last-child{
+			margin-bottom: 0;
+		}
+		dl{
+			margin-bottom: 55px;
+			@include mq(){
+				margin-bottom: 40px;
+			}
+			&:last-child{
+				margin-bottom: 0;
+			}
+			dt{
+				position: relative;
+				padding: 0 0 0 50px;
+				@include font-size(19);
+				font-weight: bold;
+				margin-bottom: 25px;
+				@include mq(){
+					padding: 0 0 0 38px;
+					@include fts(17,25);
+					margin-bottom: 20px;
+				}
+				&:before{
+					content: "";
+					width: 42px;
+					height: 45px;
+					background: url(../img/faq/Q.png) no-repeat;
+					background-size: 100%;
+					position: absolute;
+					top: -12px;
+					left: 0;
+					@include mq(){
+						top: -4px;
+						width: 30px;
+						height: 32px;
+					}
+				}
+			}
+			dd{
+				position: relative;
+				padding: 0 0 0 60px;
+				@include fts(17,27);
+				@include mq(){
+					padding: 0 0 0 38px;
+					@include fts(16,25);
+				}
+				&:before{
+					content: "";
+					width: 31px;
+					height: 31px;
+					background: url(../img/faq/A.png) no-repeat;
+					background-size: 100%;
+					position: absolute;
+					top: -2px;
+					left: 20px;
+					@include mq(){
+						left: 0;
+						width: 30px;
+						height: 30px;
+					}
+				}
+			}
+		}
+	}
+}

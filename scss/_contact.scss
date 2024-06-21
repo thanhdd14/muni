@@ -1,0 +1,153 @@
+@use "vars" as *;
+
+.contact-page{
+	background: white;
+	margin: -65px 0 0;
+	padding: 40px 15px 150px;
+	@include mq(){
+		margin: -135px 0 0;
+	}
+	&__ttl{
+		display: block;
+		text-align: center;
+		@include font-size(30);
+		font-weight: bold;
+		margin-bottom: 30px;
+	}
+	&__note{
+		margin-bottom: 30px;
+
+		&-text{
+			margin-bottom: 40px;
+			@include mq(){
+				@include fts(16,30);
+			}
+			&:last-child{
+				margin-bottom: 0;
+			}
+			p{
+				@include mq(){
+					margin-bottom: 20px;
+				}
+			}
+			&--thanks{
+				margin-bottom: 60px;
+				p{
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+	.contact-note{
+		border: 1px solid $pink;
+		background: #E6EAEF;
+		@include fts(17,27);
+		padding: 15px 20px;
+		max-width: 768px;
+		margin: 0 auto 40px;
+		@include mq(){
+			@include font-size(14);
+		}
+	}
+	.note{
+		display: inline-block;
+		@include fts(13,21);
+		color: white;
+		border-radius: 2px;
+		background: rgb(193,134,222);
+		background: linear-gradient(180deg, rgba(193,134,222,1) 0%, rgba(233,195,210,1) 100%);
+		padding: 1px 5px 3px;
+		margin: 0 7px 0 0;
+	}
+	&__tel{
+		@include flex(center,center,wrap);
+		max-width: 400px;
+		height: 142px;
+		padding: 15px;
+		background: url("../img/contact/contact-page-img.jpg")no-repeat;
+		background-size: cover;
+		margin: 0 auto 35px;
+		border-radius: 10px;
+		@include mq(){
+			height: 116px;
+		}
+		img{
+			width: 284px;
+			@include mq(){
+				width: 227px;
+			}
+		}
+	}
+}
+.contact-block-form{
+	max-width: 768px;
+	margin: 0 auto;
+	@include mq(){
+		@include font-size(14);
+	}
+}
+.contact-form{
+	border: 1px solid $pink;
+	padding: 50px 40px;
+	@include mq(){
+		border: none;
+		padding: 0;
+	}
+	&__item{
+		margin-bottom: 30px;
+		&:last-child{
+			margin-bottom: 0;
+		}
+		dt{
+			@include font-size(19);
+			font-weight: 500;
+			border-bottom: 1px solid #E6EAEF;
+			padding-bottom: 10px;
+			margin-bottom: 20px;
+			@include mq(){
+				@include font-size(16);
+			}
+			small{
+				@include font-size(13);
+			}
+			.note{
+				font-weight: 400;
+				margin: 0 0 0 5px;
+			}
+		}
+		@include mq(){
+			@include font-size(16);
+		}
+	}
+	&__check{
+		@include flex(center,center,wrap);
+		margin-bottom: 50px;
+		a{
+			color: #3E3A39;
+			position: relative;
+			z-index: 1;
+		}
+	}
+	&__sub{
+		@include flex(center,center,wrap);
+		.c-btn__sub{
+			margin: 0 15px 15px;
+		}
+	}
+}
+
+
+.mw_wp_form_confirm {
+	.contact-block-form--note{
+		display: none;
+	}
+	.contact-form{
+		&__item{
+			dt{
+				span{
+					display: none;
+				}
+			}
+		}
+	}
+}
