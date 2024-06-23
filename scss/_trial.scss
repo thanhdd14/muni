@@ -1,0 +1,153 @@
+@use "vars" as *;
+
+.sec-trial-page{
+	@include mq(){
+		.inner{
+			padding: 0 25px;
+		}
+	}
+}
+
+.trial-list{
+	@include flex(center,center,wrap);
+	margin: -30px -12px 150px;
+	@include mq(){
+		margin: -80px -12px 80px;
+	}
+	&__item{
+		padding: 0 12px;
+		width: 33.333%;
+		@include mq(sm){
+			width: 100%;
+			margin-bottom: 15px;
+		}
+	}
+	&__box{
+		display: block;
+		color: #3E3A39;
+		font-weight: bold;
+		@include fts(17,30);
+		text-align: center;
+		padding: 20px;
+		border-radius: 10px;
+		overflow: hidden;
+		background: white;
+		box-shadow: 0 3px 6px 0 rgba(black,0.16);
+		@include mq(sm){
+			border-radius: 5px;
+			@include fts(16,25);
+			@include flex(0,center,wrap);
+			padding: 10px;
+		}
+	}
+	&__img{
+		margin-bottom: 10px;
+		@include mq(sm){
+			width: 100px;
+			margin-bottom: 0;
+		}
+	}
+	&__ct{
+		@include mq(sm){
+			width: calc(100% - 100px);
+			padding: 0 0 0 15px;
+			text-align: left;
+		}
+	}
+}
+
+.trial-heading{
+	@include font-size(25);
+	font-weight: 500;
+	margin-bottom: 50px;
+	h2{
+		font-weight: 500;
+	}
+	.c-ft--adventures{
+		display: block;
+		@include font-size(30);
+		color: $pink;
+	}
+}
+.trial-steps{
+	max-width: 724px;
+	margin: 0 auto;
+	counter-reset: section;
+	&__item{
+		position: relative;
+		padding-bottom: 35px;
+		margin-bottom: 45px;
+		@include mq(){
+			padding-bottom: 30px;
+		}
+		&:after{
+			content: "";
+			width: 102px;
+			height: 18px;
+			background: url("../img/trial/dow.png")no-repeat;
+			background-size: 100%;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+		}
+		&:last-child{
+			&:after{
+				display: none;
+			}
+		}
+	}
+	&__box{
+		@include flex(0,center,wrap);
+	}
+	&__img{
+		width: 215px;
+		@include mq(){
+			width: 120px;
+		}
+	}
+	&__ct{
+		width: calc(100% - 215px);
+		color: #3e3a39;
+		position: relative;
+		padding: 0 0 0 5%;
+		@include mq(){
+			@include fts(16,25);
+			width: calc(100% - 120px);
+			padding: 0 0 0 15px;
+		}
+		&:before{
+			counter-increment: section;
+			content: "Step . " counter(section);
+			font-family: $font-jp;
+			@include font-size(20);
+			display: block;
+			margin-bottom: 5px;
+			@include mq(){
+				@include font-size(15);
+			}
+		}
+		&-ttl{
+			display: inline-block;
+			background: #E6EAEF;
+			@include font-size(25);
+			font-weight: 500;
+			line-height: 1.4;
+			position: relative;
+			padding: 5px 30px 5px 10px;
+			border-radius: 0 50px 50px 0;
+			margin-bottom: 20px;
+			@include mq(){
+				display: block;
+				border-radius: 0;
+				@include fts(19,25);
+				padding: 6px 10px 7px;
+			}
+		}
+		&--sp{
+			width: 100%;
+			padding-top: 10px;
+		}
+	}
+}
