@@ -6,10 +6,16 @@
 	max-width: 1190px;
 	padding: 0 15px;
 	margin: 0 auto;
+	&--1010{
+		max-width: 1040px;
+	}
 }
 
 main{
 	padding-top: 100px;
+	@include mq{
+		padding-top: 60px;
+	}
 }
 
 .breadcrumb{
@@ -78,11 +84,9 @@ main{
 		}
 		.c-ft--base{
 			@include font-size(17);
-			line-height: 1.55;
 		}
 		.c-ft--jp{
 			@include font-size(40);
-			margin-bottom: 10px;
 		}
 	}
 }
@@ -275,4 +279,16 @@ textarea.form-control{
 	}
 }
 
+
+
+//navigation
+//<div class="nums-page">
+//	<div class='wp-pagenavi' role='navigation'>
+//		<a class="prevtpostslink previouspostslink" rel="next" aria-label="Prev Page" href="">Prev</a>
+//		<span aria-current='page' class='current'>1</span>
+//		<a class="page larger" title="Page 2" href="">2</a>
+//		<a class="page larger" title="Page 3" href="">3</a>
+//		<a class="nextpostslink" rel="next" aria-label="Next Page" href="">Next</a>
+//	</div>
+//</div>
 

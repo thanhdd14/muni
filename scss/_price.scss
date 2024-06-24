@@ -1,0 +1,217 @@
+@use 'vars' as *;
+
+.price-intro{
+    background: url(../img/price/bg-intro.jpg) no-repeat center/cover;
+    @include mq{
+        background: url(../img/price/bg-heading-sp.jpg) no-repeat center/cover;
+    }
+    &__img{
+        max-width: 839px;
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+        top: -87px;
+        @include mq{
+            width: 387px;
+            top: -171px;
+            margin-bottom: -113px;
+        }
+    }
+}
+
+.price-main{
+    background: #E4F0F9;
+    padding: 83px 0 190px;
+    position: relative;
+    @include mq{
+        padding: 45px 0 80px;
+    }
+    @include p-before(1590px, 819px){
+        background: url(../img/price/before-01.png) no-repeat top center/100%;
+        top: 0;
+        right: -30px;
+        @include mq{
+            width: 427px;
+            height: 414px;
+            background: url(../img/price/before-01-sp.png) no-repeat top center/100%;
+        }
+    }
+    &__ttl{
+        margin-bottom: 90px;
+        position: relative;
+        z-index: 2;
+        @include mq{
+            margin-bottom: 76px;
+        }
+    }
+    &__box{
+        max-width: 768px;
+        width: 100%;
+        margin: 0 auto 142px;
+        position: relative;
+        @include mq{
+            margin-bottom: 83px;
+        }
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+        &-content{
+            padding: 36px 75px 50px;
+            @include mq{
+                padding: 27px 30px;
+            }
+            dl{
+                @include flex(0, center, wrap);
+                @include font-size(19);
+                border-bottom: 1px dotted #5792C4;
+                @include mq{
+                    @include font-size(17);
+                }
+                &:last-of-type{
+                    border-bottom: none;
+                }
+                &:nth-child(1){
+                    border-bottom: 1px solid #5792C4;
+                    @include font-size(16);
+                    dt, dd{
+                        padding: 10px 0;
+                        font-weight: 500;
+                    }
+                }
+                dt, dd{
+                    padding: 20px 0;
+                    text-align: center;
+                    @include mq{
+                        padding: 23px 0;
+                    }
+                }
+                dt{
+                    width: 174px;
+                    font-weight: 700;
+                    @include mq{
+                        width: 107px;
+                        line-height: 1.1;
+                    }
+                    small{
+                        @include font-size(15);
+                        @include mq{
+                            @include font-size(13);
+                        }
+                    }
+                }
+                dd{
+                    width: calc(100% - 174px);
+                    @include font-size(19);
+                    font-weight: 500;
+                    border-left: 1px solid rgba($color: #5792C4, $alpha: 0.1);
+                    @include mq{
+                        @include font-size(17);
+                        width: calc(100% - 107px);
+                    }
+                    small{
+                        @include font-size(13);
+                        @include mq{
+                            @include font-size(11);
+                        }
+                    }
+                }
+            }
+        }
+        &-ttl{
+            width: 173px;
+            height: 105px;
+            position: absolute;
+            left: 0;
+            left: 0;
+            transform: translate(-43%,-45%);
+            @include flex(center, center);
+            @include font-size(30);
+            line-height: 1;
+            text-align: center;
+            color: #fff;
+            font-family: $font-jp;
+            @include mq(lg){
+                transform: translate(0, -45%);
+            }
+            @include mq{
+                @include font-size(25);
+                width: 114px;
+                height: 69px;
+                transform: translate(0, -45%);
+            }
+        }
+        &-desc{
+            margin-top: 30px;
+            line-height: 1.82;
+            letter-spacing: 0.8px;
+            @include mq{
+                @include fts(14, 20);
+                margin-top: 17px;
+                padding: 0 10px;
+                letter-spacing: 0;
+            }
+        }
+       
+        &:nth-child(1){
+            .price-main__box{
+                &-content{
+                    color: #fff;
+                    background: url(../img/price/bg-content-01.png) no-repeat center/100% 100%;
+                    @include mq{
+                        background: url(../img/price/bg-content-01-sp.png) no-repeat center/100% 100%;
+                    }
+                    dl, dt{
+                        border-color: #fff;
+                    }
+                    dd{
+                        border-color: rgba($color: #fff, $alpha: 0.1);
+                    }
+                }
+                &-ttl{
+                    background: url(../img/price/bg-ttl-01.png) no-repeat center/100% 100%;
+                }
+            }
+        }
+        &:nth-child(n + 2){
+            .price-main__box{
+                &-content{
+                    background: url(../img/price/bg-content-02.png) no-repeat center/100% 100%;
+                    @include mq{
+                        padding: 62px 36px 10px;
+                        background: url(../img/price/bg-content-02-sp.png) no-repeat center/100% 100%;
+                    }
+                    dl{
+                        dt{
+                            width: 282px;
+                            @include mq{
+                                width: 50%;
+                            }
+                        }
+                        dd{
+                            width: calc(100% - 282px);
+                            @include mq{
+                                width: 50%;
+                            }
+                        }
+                    }
+                }
+                &-ttl{
+                    background: url(../img/price/bg-ttl-02.png) no-repeat center/100% 100%;
+                    top: 0;
+                    left: 0;
+                    @include mq{
+                        top: 24px;
+                    }
+                }
+            }
+        }
+        &:last-of-type{
+            .price-main__box-ttl{
+                @include mq{
+                    width: 149px;
+                    height: 76px;
+                }
+            }
+        }
+    }
+}
