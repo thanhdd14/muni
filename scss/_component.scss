@@ -165,6 +165,15 @@ Component
 			position: absolute;
 			@include v-align;
 			left: 0;
+			@include smooth-transition;
+		}
+		&:hover{
+			opacity: 1;
+			color: $pink;
+			&:before{
+				background: url("../img/common/arrow-right-hv.png")no-repeat;
+				background-size: 100%;
+			}
 		}
 		&--white{
 			color: white;
@@ -173,6 +182,7 @@ Component
 				background-size: 100%;
 			}
 		}
+
 	}
 	&__sub{
 		@include flex(center,center,wrap);

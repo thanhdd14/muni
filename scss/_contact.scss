@@ -18,6 +18,7 @@
 		margin-bottom: 30px;
 
 		&-text{
+			letter-spacing: 0.04em;
 			margin-bottom: 40px;
 			@include mq(){
 				@include fts(16,30);
@@ -39,7 +40,7 @@
 		}
 	}
 	.contact-note{
-		border: 1px solid $pink;
+		border: 1px solid #B6C4D6;
 		background: #E6EAEF;
 		@include fts(17,27);
 		padding: 15px 20px;
@@ -58,6 +59,8 @@
 		background: linear-gradient(180deg, rgba(193,134,222,1) 0%, rgba(233,195,210,1) 100%);
 		padding: 1px 5px 3px;
 		margin: 0 7px 0 0;
+		line-height: 1.23;
+		letter-spacing: 0;
 	}
 	&__tel{
 		@include flex(center,center,wrap);
@@ -87,7 +90,7 @@
 	}
 }
 .contact-form{
-	border: 1px solid $pink;
+	border: 1px solid #B6C4D6;
 	padding: 50px 40px;
 	@include mq(){
 		border: none;
@@ -101,9 +104,10 @@
 		dt{
 			@include font-size(19);
 			font-weight: 500;
-			border-bottom: 1px solid #E6EAEF;
+			border-bottom: 2px solid #E6EAEF;
 			padding-bottom: 10px;
 			margin-bottom: 20px;
+			letter-spacing: 0.04em;
 			@include mq(){
 				@include font-size(16);
 			}
