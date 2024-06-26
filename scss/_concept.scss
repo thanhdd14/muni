@@ -1,5 +1,110 @@
 @use 'vars' as *;
 
+.mv-page__concept{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    @include fts(30, 44);
+    font-family: $font-jp;
+    letter-spacing: 3px;
+    @include mq{
+        @include fts(18, 26);
+        padding: 0 25px;
+    }
+    @include mq(sm){
+        text-align: left;
+        top: 37%;
+    }
+    span{
+        @include mq(sm){
+            display: block;
+        }
+        span{
+            @include font-size(60);
+            position: relative;
+            padding: 0 20px;
+            letter-spacing: 6px;
+            line-height: 2.2;
+            margin-right: 15px;
+            @include mq{
+                display: inline-block;
+                @include fts(39, 58);
+                letter-spacing: 3px;
+                margin-right: 12px;
+            }
+            @include p-before(38px, 38px){
+                background: url(../img/concept/before.png) no-repeat center/100%;
+                top: 0;
+                left: 0;
+                @include mq{
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+            @include p-after(38px, 38px){
+                background: url(../img/concept/before.png) no-repeat center/100%;
+                bottom: 0;
+                right: 0;
+                transform: rotate(180deg);
+                @include mq{
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+    }
+}
+
+
+.concept-intro{
+    max-width: 966px;
+    width: 92%;
+    margin: 0 auto;
+    padding: 23px 48px;
+    margin-top: -60px;
+    position: relative;
+    z-index: 2;
+    letter-spacing: 2.8px;
+   @include fts(19, 40);
+    margin-bottom: 115px;
+    @include mq{
+       
+        @include fts(16, 25);
+        padding: 8px 20px;
+        letter-spacing: 1px;
+        margin-bottom: 112px;
+        margin-top: -140px;
+    }
+    p{
+        position: relative;
+        z-index: 2;
+        margin-bottom: 16px;
+        letter-spacing: 2.8px;
+        line-height: 2.5;
+        @include mq{
+            line-height: 1.5625;
+            letter-spacing: 0.5px;
+        }
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+    }
+    @include p-before(104%, 100%){
+        background: url(../img/concept/bg-blur.png) no-repeat top center/100%;
+        top: -9%;
+        left: -2%;
+        @include mq{
+            background: url(../img/concept/bg-blur-sp.png) no-repeat top / 100% 100%;
+            top: -40px;
+            left: -6%;
+            width: 112%;
+        }
+    }
+}
 
 .concept-page{
     &__txt-intro{
