@@ -118,6 +118,7 @@ Component
             &--adventures{
                 @include font-size(30);
                 color: rgba($color: #5792C4, $alpha: 1.0);
+	            opacity: 0.5;
             }
         }
 		&--sm{

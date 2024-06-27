@@ -587,10 +587,19 @@
 		img{
 			width: 282px;
 		}
+		&:hover{
+			opacity: 1;
+			background: $pink url("../img/common/contact-img.png")no-repeat;
+			background-size: cover;
+		}
 	}
 	&__mail{
 		color: white;
 		line-height: 1.3;
+		&:hover{
+			opacity: 1;
+			background: $pink;
+		}
 		span{
 			display: block;
 			position: relative;
