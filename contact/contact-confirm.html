@@ -11,42 +11,15 @@
 		<link type="text/css" rel="stylesheet" href="../js/slick/slick-theme.css">
 		<link type="text/css" rel="stylesheet" href="../js/slick/slick.css">
 		<link type="text/css" rel="stylesheet" href="../css/styles.css">
-		<script>
-			(function(d)
-			{
-				var config = {
-						kitId: 'fzj8wtg',
-						scriptTimeout: 3000,
-						async: true
-					},
-					h = d.documentElement,
-					t = setTimeout(function()
-					{
-						h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
-					}, config.scriptTimeout),
-					tk = d.createElement("script"),
-					f = false,
-					s = d.getElementsByTagName("script")[0],
-					a;
-				h.className += " wf-loading";
-				tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
-				tk.async = true;
-				tk.onload = tk.onreadystatechange = function()
-				{
-					a = this.readyState;
-					if (f || a && a != "complete" && a != "loaded") return;
-					f = true;
-					clearTimeout(t);
-					try
-					{
-						Typekit.load(config)
-					}
-					catch (e)
-					{}
-				};
-				s.parentNode.insertBefore(tk, s)
-			})(document);
-		</script>
+		<script> (function(d) {
+			var config = {
+					kitId: 'fzj8wtg',
+					scriptTimeout: 3000,
+					async: true
+				},
+				h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+		})(document);
+</script>
 	</head>
 	<body>
 		<header id="header">
@@ -186,8 +159,7 @@
 						</div>
 						<div class="contact-block-form mw_wp_form_confirm">
 							<p class="contact-block-form--note mbpc-15 mbsp-50">
-								<span class="note">必須</span>の項目は、必ずご入力お願いします。
-							</p>
+								<span class="note">必須</span>の項目は、必ずご入力お願いします。 </p>
 							<div class="contact-form">
 								<dl class="contact-form__item">
 									<dt> 入会情報<span class="note">必須</span>
@@ -251,7 +223,7 @@
 					</dl>
 					<dl>
 						<dt>アクセス</dt>
-						<dd>井の頭線／小田急線　下北沢駅より徒歩5分</dd>
+						<dd>井の頭線／小田急線　<br class="sp">下北沢駅より徒歩5分</dd>
 					</dl>
 				</div>
 				<div class="footer-menu">
