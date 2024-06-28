@@ -8,6 +8,19 @@
 	}
 }
 
+.page-trial, .page-faq{
+	.mv-page__ttl .c-ft--jp{
+		@include mq(md-min){
+			line-height: 1.475;
+			margin-bottom: 20px;
+		}
+		@include mq{
+			margin-bottom: 20px;
+		}
+	}
+}
+
+
 .trial-list{
 	@include flex(center,center,wrap);
 	margin: -30px -12px 150px;

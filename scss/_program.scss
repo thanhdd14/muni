@@ -99,6 +99,7 @@
                 @include font-size(13);
                 line-height: 1.3;
                 margin: 0 -10px;
+                font-weight: 400;
                 @include mq{
                     display: none;
                     @include fts(12, 16);
@@ -113,9 +114,28 @@
 
 
 .program-main{
+
     padding-bottom: 50px;
     @include mq{
         padding-bottom: 0;
+
+    }
+    &:before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: -28vw;
+        background: url(../img/program/bg-after.png) no-repeat top center/174% auto;
+        @include mq(lp){
+            bottom: 0;
+        }
+        @include mq(){
+            top: 200px;
+            background: url(../img/program/bg-after-sp.png) no-repeat;
+            background-size: 100%;
+        }
     }
     &__list{
         @include flex(0, 0, wrap);
@@ -221,8 +241,8 @@
             @include flex(0, center);
             position: relative;
             @include mq(tb){
-                padding-bottom: 50px;
-                margin-bottom: 50px;
+                padding-bottom: 54px;
+                margin-bottom: 54px;
                 align-items: flex-start;
                 padding-left: 20px;
                 padding-right: 20px;
@@ -258,6 +278,15 @@
                     }
                     &-img{
                         margin-bottom: 0;
+                    }
+                }
+            }
+            &:nth-child(4){
+                @include mq{
+                    padding-bottom: 50px;
+                    margin-bottom: 50px;
+                    &:after{
+                        display: block;
                     }
                 }
             }
