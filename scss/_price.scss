@@ -26,12 +26,13 @@
     @include mq{
         padding: 45px 0 80px;
     }
-    @include p-before(1590px, 819px){
-        background: url(../img/price/before-01.png) no-repeat top center/100%;
+    @include p-before(100%, 80vw){
+        background: url(../img/price/before-01.png) no-repeat;
         top: 0;
-        right: -30px;
+        background-size: 100%;
+        right: 0;
         @include mq{
-            width: 427px;
+            width: 100%;
             height: 414px;
             background: url(../img/price/before-01-sp.png) no-repeat top center/100%;
             right: 0;

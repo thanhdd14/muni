@@ -24,7 +24,7 @@ $(function () {
 		var target = $(href);
 		var position = target.offset().top - headerHeight;
 		$('body,html').stop().animate({scrollTop: position}, 1000);
-		$('.js-mobile').removeClass('.js-mobile--close');
+		$('.js-mobile').removeClass('js-mobile--close');
 		$("html").removeClass('js-locked');
 		$(".header-nav").fadeOut();
 	});

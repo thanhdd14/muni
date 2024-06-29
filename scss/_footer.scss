@@ -228,11 +228,14 @@
 					@include font-size(14);
 					background: #346187;
 					display: inline-block;
-					padding: 5px 4px 1px;
+					//padding: 5px 4px 1px;
 					margin: 0 0 2px 34px;
+					width: 44px;
 					@include mq(){
-						padding: 3px 4px;
+						//padding: 3px 4px;
 						margin: 0 0 3px 8px;
+						position: relative;
+						top: -2px;
 					}
 				}
 			}

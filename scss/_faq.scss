@@ -1,5 +1,9 @@
 @use "vars" as *;
-
+.page-faq{
+	.mv-page__ttl .c-ft--jp{
+		margin-bottom: 10px;
+	}
+}
 .faq-block{
 	background: white;
 	margin: -65px 0 0;
