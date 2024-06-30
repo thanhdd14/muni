@@ -26,7 +26,7 @@
 		@include mq(tb){
 			display: none;
 			position: absolute;
-			top: 59px;
+			top: 87px;
 			left: 0;
 			width: 100%;
 			height: calc(100vh - 59px);
@@ -39,6 +39,9 @@
 			&.active{
 				display: block;
 			}
+		}
+		@include mq{
+			top: 59px;
 		}
 		&__menu{
 			display: flex;
