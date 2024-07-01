@@ -82,6 +82,9 @@
 						@include flex(0,center,wrap);
 						position: relative;
 						padding: 0 0 0 13px;
+						@include mq(md-min){
+							height: 33px;
+						}
 						span{
 							display: block;
 							margin: 0 13px 0 0;
@@ -91,6 +94,9 @@
 						}
 						.c-ft--en{
 							@include font-size(19);
+							@include mq(md-min){
+								height: 100%;
+							}
 						}
 						.c-ft--base{
 							@include font-size(13);
