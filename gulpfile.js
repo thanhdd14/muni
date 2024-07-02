@@ -152,7 +152,7 @@ gulp.task("sass", function(done) {
         }))
         .pipe(autoprefixer({browsers: ['last 3 versions', 'ie >= 10']}))
 
-        .pipe(cssNano())
+       
         .pipe(gulp.dest(paths.styles.dist, {
             // ソースマップを出力する場合のパス
             sourcemaps: './map',
